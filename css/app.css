@@ -1,0 +1,898 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+/*Preloader css*/
+
+
+:root {
+    --primary: #933ded;
+    --dark: #232323;
+    --pure: #fff;
+    --smoke: whitesmoke;
+    --dark-gray: #999;
+}
+
+.container {
+    width: 100%;
+    
+    margin: 0 auto;
+    background-color: black;
+}
+#up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  background-color: #035397;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    
+}
+
+.brand svg {
+    height: 30px;
+    margin-right: 10px;
+}
+.brand .log {
+  margin-left: 30px;
+}
+
+.brand svg path {
+    fill: var(--pure);
+}
+
+.nav-wrapper ul.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.nav-wrapper ul.nav-list li {
+    margin-left: 30px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.nav-wrapper ul.nav-list li a {
+    color: var(--pure);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all .5s ease-in-out;
+}
+.nav-wrapper ul.nav-list li a:hover, .nav-wrapper ul.nav-list li.active a {
+    color: #5089C6;
+}
+.nav-wrappergb .v-list .ic a{
+  margin-left: 9px;
+}
+.nav-wrapper ul.nav-list .ic a:hover{
+  color: #035397;
+}
+.nav-wrapper ul.nav-list .ic .heart:hover{
+  color: red;
+}
+.nav-wrapper ul.nav-list .ic .user:hover{
+  color: gold;
+}
+.nav-wrapper ul.nav-list .ic .shop:hover{
+  color:rgb(38, 0, 255);
+}
+.se {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+.btn {
+    background: #035397;
+    color: var(--pure);
+    outline: none;
+    padding: 8px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    transition: all .5s ease-in-out;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: #5089C6;
+    
+}
+
+
+main section.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 160px;
+}
+
+main section.header h1 {
+    font-size: 36px;
+    font-weight: 100;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.dropdown-menu 
+{
+	background:#000;
+}
+.dropdown-menu::after {
+  padding-left: 4px;
+  content: ' \025BE';
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover
+{
+	background:#000;
+}
+main section.header h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+nav ul.dropdown-list {
+    list-style-type: none;
+    display: block;
+    background: black;
+    padding: 6px 16px;
+    position: absolute;
+    width: max-content;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-wrapper ul.dropdown-list li {
+    margin-left: 0;
+    padding: 5px 0;
+}
+
+
+.nav-wrapper ul.dropdown-list  li a {
+    color: white;
+} 
+
+.nav-wrapper ul.nav-list li:hover .dropdown-list {
+    opacity: 1;
+    pointer-events: auto;
+    animation: moveUp .5s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(20px); 
+    }
+}
+
+.navbar, .dropdown-menu{
+  background:rgba(255,255,255,0.25);
+  border: none;
+  
+  }
+  
+  .nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+    border-bottom: 3px solid transparent;
+  }
+  .nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    border-bottom: 3px solid transparent;
+    background: none;
+  }
+  .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+   color: #fff;
+  }
+  .dropdown-menu{
+        -webkit-box-shadow: none;
+      box-shadow:none;
+  }
+  
+  .nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+    border-bottom: #C4E17F 3px solid;
+  }
+  .nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+    border-bottom: #F7FDCA 3px solid;
+  }
+  .nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+    border-bottom: #FECF71 3px solid;
+  }
+  .nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+    border-bottom: #F0776C 3px solid;
+  }
+  .nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+    border-bottom: #DB9DBE 3px solid;
+  }
+  .nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+    border-bottom: #C49CDE 3px solid;
+  }
+  .nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+    border-bottom: #669AE1 3px solid;
+  }
+  .nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+    border-bottom: #62C2E4 3px solid;
+  }
+  
+  .navbar-toggle .icon-bar{
+      color: #fff;
+      background: #fff;
+  }
+.hamburger {
+    display: none;
+}
+
+.mobile .hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.mobile .hamburger span {
+    background: white;
+    width: 28px;
+    height: 2px;
+    margin-bottom: 8px;
+}
+
+.mobile ul.nav-list {
+    background: -webkit-linear-gradient(45deg, #434343, #000000);
+    background: linear-gradient(45deg, #434343, #000000);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    padding-top: 80px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.hamburger, .brand {
+    z-index: 9999;
+}
+
+.mobile ul.nav-list.open {
+    opacity: 1;
+    pointer-events: auto;  
+    z-index: 99;
+}
+
+.mobile .hamburger span {
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+}
+
+.mobile ul.nav-list li a {
+    font-size: 20px;
+}
+
+.mobile ul.dropdown-list {
+    position: relative;
+    background: transparent;
+    text-align: center;
+    height: 0;
+    overflow-y: hidden;
+    transition: opacity 1s ease-in-out;
+    padding-top: 0;
+    z-index: 99;
+}
+
+.mobile .nav-wrapper ul li:hover .dropdown-list {
+    height: max-content;
+    padding-top: 6px;
+}
+
+.mobile ul.nav-list li {
+    margin-left: 0;
+    text-align: center;
+}
+.brand span {
+  color: white;
+}
+.brand span .gre {
+  color:#5089C6
+}
+
+/*
+.header  {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 255, 117, 0.63);
+}
+.co-links {
+    display: flex;
+    justify-content: space-between;
+    }
+        
+.co-links .logo {
+    margin-top: 19px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.co-links .left {
+    margin-top: 10px;
+    margin-right: 20px;
+
+}
+.left input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 19px;
+
+}
+.left input:focus {
+    outline: none;
+    border: none;
+}
+.left i {
+
+    font-size: 25px;
+}
+
+
+.links-5 .links {
+   display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-5 .links li {
+    font-size: 18px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+*/
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+ margin-top: 20px;
+    
+  }
+  .mySlides img {
+    
+        height: 500px;
+      
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #5089C6;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: white;
+    font-size: 19px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #5089C6
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .shirt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    margin-top: 80px;
+    margin-left: 25px;
+    grid-column-gap: 20px;
+ 
+  }
+
+  .shirt h2 {
+    font-size: 22px;
+    border-bottom: 4px solid #035397;
+  }
+  .shirt .one img {
+    width: 240px;
+    height: 340px;
+    text-align: center;
+  }
+  .shirt .one p{
+    font-size: 12px;
+  }
+  .shirt .one .red {
+    color:#5089C6;
+    float: left;
+    font-size: 12px;
+  }
+ 
+
+  .shirt .one h4 span i {
+    margin-right: 5px;
+  }
+  .shirt .one h5 {
+    text-decoration: line-through;
+    float: right;
+    font-size: 10px;
+  }
+  .shirt .one button {
+    padding: 15px;
+    color: white;
+    background-color:#035397;
+    font-size: 19px;
+    transition: .5s ease-in-out;
+    border: none;
+    
+  }
+  
+  .shirt .one button:hover {
+    background-color: #5089C6;
+  }
+  .shirt .sale::before {
+    content: '25%';
+    background-color: #5089C6;
+    width: 50px;
+    position: absolute;
+    color: white;
+    font-weight: 200;
+  }
+  .product-color h4 {
+    font-size: 11px;
+    padding: 0 21px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .ul-color {
+    margin-left: 27px;
+  }
+  
+  .ul-color li {
+    list-style: none;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  
+  .ul-color li a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+  .ul-color li a.active {
+    border: 2px solid #5089C6;
+  }
+  .ul-color li a.orange {
+    background: black;
+  }
+  
+  .ul-color li a.green {
+    background: grey;
+  }
+  
+  .ul-color li a.yellow {
+    background: blue;
+  }
+  
+  .ul-color2 {
+    margin-left: 27px;
+  }
+  
+  .ul-color2 li {
+    list-style: none;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  
+  .ul-color2 li a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+  
+  .ul-color2 li a.orange2 {
+    background: gold;
+  }
+  
+  .ul-color2 li a.green2 {
+    background: silver;
+  }
+  
+
+  .ul-size {
+    margin-left: 15px;
+  }
+  
+  .ul-size li {
+    list-style: none;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  .ul-size li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 11px;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 23px;
+    color: #000;
+  }
+  
+  .ul-size li a.active {
+    background: #5089C6;
+    color: #fff;
+  }
+  
+  .product-size:before,
+  .product-size:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  
+  @media (max-width: 375px) {
+    .shirt {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-row-gap: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .one {
+        text-align: center;
+    }
+    .shirt .one p{
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    .shirt .one .red {
+      color: #5089C6;
+      float: left;
+      font-size: 12px;
+    }
+    .shirt .one button {
+      padding: 7px;
+      color: white;
+      background-color: #035397;
+      font-size: 12px;
+      transition: .5s ease-in-out;
+      border: none;
+    }
+    .shirt .one h5 {
+      text-decoration: line-through;
+      float: left;
+      font-size: 12px;
+    }
+    .shirt .one img {
+      width: 200px;
+      height: 290px;
+      text-align: center;
+    }
+   
+}
+
+
+@media (min-width : 600px) {
+    .shirt {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        text-align: center;
+    }
+    .one {
+        text-align: center;
+    }
+    .shirt .one p{
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    .shirt .one .red {
+      color:#5089C6;
+      float: left;
+      font-size: 15px;
+    }
+    .shirt .one button {
+      padding: 12px;
+      color: white;
+      background-color: #035397;
+      font-size: 12px;
+      transition: .5s ease-in-out;
+      border: none;
+    }
+    .shirt .one h5 {
+      text-decoration: line-through;
+      float: left;
+      font-size: 12px;
+    }
+    .shirt .one img {
+      width: 200px;
+      height: 290px;
+      text-align: center;
+
+    }
+   
+}
+
+@media (min-width : 992px) {
+    .shirt{
+        display: grid;
+        grid-template-columns: 1fr 1fr  1fr 1fr;
+    }
+    .one {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+.men {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 40px;
+  margin-top: 80px;
+  margin-left: 25px;
+  grid-column-gap: 20px;
+
+}
+
+.men h2 {
+  font-size: 22px;
+  border-bottom: 4px solid #035397;
+}
+.men .two img {
+  width: 240px;
+  height: 340px;
+  text-align: center;
+}
+.men .two p{
+  font-size: 12px;
+}
+.men .two .red {
+  color:#5089C6;
+  float: left;
+  font-size: 12px;
+}
+
+.two .two h4 span i {
+  margin-right: 5px;
+}
+.men .two h5 {
+  text-decoration: line-through;
+  float: right;
+}
+.men .two button {
+  padding: 12px;
+  color: white;
+  background-color: #035397;
+  font-size: 14px;
+  transition: .5s ease-in-out;
+  border: none;
+}
+.men .two button:hover {
+  background-color: #5089C6;
+}
+.men .sale::before {
+  content: '25%';
+  background-color: #5089C6;
+  width: 50px;
+  position: absolute;
+  color: white;
+  font-weight: 200;
+}
+@media (max-width: 375px) {
+  .men {
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-row-gap: 20px;
+      margin-top: 20px;
+      text-align: center;
+  }
+  .two {
+      text-align: center;
+  }
+  .men .two p{
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .men .two .red {
+    color:#5089C6;
+    float: left;
+    font-size: 15px;
+  }
+  .men .two button {
+    padding: 7px;
+    color: white;
+    background-color: #035397;
+    font-size: 12px;
+    transition: .5s ease-in-out;
+    border: none;
+  }
+  .men .two h5 {
+    text-decoration: line-through;
+    float: left;
+    font-size: 12px;
+  }
+  .men .two img {
+    width: 200px;
+    height: 290px;
+    text-align: center;
+  }
+ 
+}
+
+
+@media (min-width : 600px) {
+  .men {
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      text-align: center;
+  }
+  .two {
+      text-align: center;
+  }
+  .men .two p{
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .men .two .red {
+    color:#5089C6;
+    float: left;
+    font-size: 15px;
+  }
+  .men .two button {
+    padding: 12px;
+    color: white;
+    background-color: #035397;
+    font-size: 14px;
+    transition: .5s ease-in-out;
+    border: none;
+  }
+  .men .two h5 {
+    text-decoration: line-through;
+    float: left;
+    font-size: 12px;
+  }
+  .men .two img {
+    width: 200px;
+    height: 290px;
+    text-align: center;
+  }
+ 
+}
+
+@media (min-width : 992px) {
+  .men{
+      display: grid;
+      grid-template-columns: 1fr 1fr  1fr 1fr;
+  }
+  .two {
+      text-align: center;
+  }
+}
+
+
+
+
+
+
